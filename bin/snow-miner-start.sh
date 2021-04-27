@@ -19,7 +19,7 @@ tag="snowmine.$group.$shard"
 
 docker volume create $tag
 
-docker run -d --restart always --name snow.mine --network host \
+docker run -d --restart always --name snow.mine.$group --network host \
   -e snow_miner_network=$network \
   -e snow_miner_node_uri=$uri \
   -e snow_miner_mine_to_address=$address \

@@ -15,11 +15,11 @@ fi
 group=$1
 shard=$2
 
-tag="snow.client.$group.$shard"
+tag="snow.client.$group"
 
 wallet_vol="$HOME/shard-load-test.git/loadclients/client.${group}"
 
-docker run -d --restart always --name snow.client --network host \
+docker run -d --restart always --name $tag --network host \
   -e snow_client_network=$network \
   -e snow_client_node_uri=$uri \
   -e snow_client_wallet_path=/wallet \
