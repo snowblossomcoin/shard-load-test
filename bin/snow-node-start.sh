@@ -20,7 +20,8 @@ tag="snow.node"
 port=2361
 tls_port=$(($port+1))
 
-trust_vol="~/shard-load-test.git/trustkey/trustkey.${group}"
+
+trust_vol="$HOME/shard-load-test.git/trustkey/trustkey.${group}"
 trust_addr=$(cat ~/shard-load-test.git/trustkey/trustkey.${group}/address.txt)
 
 docker volume create $tag
