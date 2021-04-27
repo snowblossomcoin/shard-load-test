@@ -14,7 +14,7 @@ fi
 
 group=$1
 shard=$2
-address=$(cat ~/shard-load-test.git/loadclients/client.${group})
+address=$(cat ~/shard-load-test.git/loadclients/client.${group}/address.txt)
 tag="snowmine.$group.$shard"
 
 docker volume create $tag
