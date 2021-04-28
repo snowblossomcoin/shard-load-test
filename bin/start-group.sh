@@ -15,5 +15,4 @@ snow-node-start.sh $group $shard
 snow-miner-start.sh $group $shard
 snow-explore-start.sh testshard grpc+tls://localhost:2362/ 80
 
-snow-client-start.sh $group $shard
 
