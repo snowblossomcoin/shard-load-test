@@ -20,9 +20,9 @@ echo "Shard: $shard"
 if [ "$base" = "node" ]
 then
   start-group.sh $group $shard
-  start-client.sh a $shard
-  start-client.sh b $shard
-  start-client.sh c $shard
-  start-client.sh d $shard
+  #start-client.sh a $shard
+  #start-client.sh b $shard
+  #start-client.sh c $shard
+  #start-client.sh d $shard
 fi
 
