@@ -1,6 +1,5 @@
 #!/bin/bash
 
-docker pull snowblossom/snowshard
 
 if [ $# -ne 2 ]
 then
