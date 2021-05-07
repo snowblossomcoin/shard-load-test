@@ -12,6 +12,13 @@ fi
 group=$1
 shards=$2
 
+mempool_reject_p2p_tx=false
+
+# The seed node doesn't want a bunch of mempool cloggers
+if [ "$shards" = "0" ]
+then
+  mempool_reject_p2p_tx=true
+fi
 
 network=testshard
 
@@ -35,6 +42,7 @@ docker run -d --restart always --name $tag --network host \
   -e snow_node_trustnet_key_path=/data/trust \
   -e snow_node_trustnet_signers=${trust_addr} \
   -e snow_node_peer_count=32 \
+  -e snow_node_mempool_reject_p2p_tx=${mempool_reject_p2p_tx} \
   -v $trust_vol:/data/trust \
   -v $tag:/data $image
 
