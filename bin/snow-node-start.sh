@@ -41,7 +41,7 @@ docker run -d --restart always --name $tag --network host \
   -e snow_node_shards=$shards \
   -e snow_node_trustnet_key_path=/data/trust \
   -e snow_node_trustnet_signers=${trust_addr} \
-  -e snow_node_peer_count=32 \
+  -e snow_node_peer_count=64 \
   -e snow_node_mempool_reject_p2p_tx=${mempool_reject_p2p_tx} \
   -v $trust_vol:/data/trust \
   -v $tag:/data $image
