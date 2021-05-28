@@ -10,8 +10,8 @@ fi
 
 
 base=$(echo $host|cut -d "-" -f 1)
-group=$(echo $host|cut -d "-" -f 2)
-shard=$(echo $host|cut -d "-" -f 3)
+group=$(echo $host|cut -d "-" -f 3)
+shard=$(echo $host|cut -d "-" -f 2)
 
 echo "Base: $base"
 echo "Group: $group"
