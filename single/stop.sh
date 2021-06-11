@@ -2,6 +2,9 @@
 
 set -eu
 
+stop-container.sh snow.node.z.0 &
+stop-container.sh snow.explore.z.0 &
+
 for group in $(cat $HOME/shardtest.groups)
 do
   for shard in $(cat $HOME/shardtest.shards)

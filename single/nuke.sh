@@ -1,5 +1,6 @@
 #!/bin/bash
 
+docker volume rm snow.node.z.0
 
 for group in $(cat $HOME/shardtest.groups)
 do

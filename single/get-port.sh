@@ -12,6 +12,26 @@ service=$3
 
 port_str="2"
 
+# special seed group
+if [ $group == "z" ]
+then
+  if [ $service == "node_tcp" ]
+  then
+    echo "2361"
+  fi
+  if [ $service == "node_tls" ]
+  then
+    echo "2362"
+  fi
+  if [ $service == "explorer" ]
+  then
+    echo "80"
+  fi
+
+  exit 0
+
+fi
+
 if [ $group == "a" ]
 then
   port_str="${port_str}0"
