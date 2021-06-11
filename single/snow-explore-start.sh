@@ -18,14 +18,13 @@ port=$(get-port.sh $group $shard explorer)
 tag="snow.explore.$group.$shard"
 uri="grpc+tls://localhost:${node_tls}/"
 
-echo "$tag"
-#docker volume create $tag
+docker volume create $tag
 
 docker run -d --restart always --name $tag --network host \
   -e SNOWBLOSSOM_JAVA_OPTIONS="-Xmx1g" \
   -e snow_explorer_network=$network \
   -e snow_explorer_node_uri=$uri \
   -e snow_explorer_port=$port \
-  $image explorer
+  -v $tag:/data $image explorer
 
 
