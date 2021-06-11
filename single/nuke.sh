@@ -9,7 +9,7 @@ do
     echo "Nuke $group $shard"
 
     docker volume rm snow.node.$group.$shard
-    docker volume rm snow.explore.$group.$shard
+    docker volume rm snow.mine.$group.$shard
   done
 done
 
