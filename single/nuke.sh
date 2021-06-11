@@ -1,6 +1,5 @@
 #!/bin/bash
 
-set -eu
 
 for group in $(cat $HOME/shardtest.groups)
 do
