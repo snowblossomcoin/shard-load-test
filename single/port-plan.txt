@@ -1,0 +1,23 @@
+
+
+
+Port numbers:
+2 Group Shard Service
+
+Group = groups a-d -> 0-4
+Shard = Shard number (two digits)
+Service
+
+  0 - node tcp
+  1 - node tls
+  2 - explorer http
+
+
+So group b, shard 3 tls would be:
+
+21031
+
+See get-port.sh
+
+
+
