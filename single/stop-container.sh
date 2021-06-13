@@ -1,4 +1,3 @@
-#!/bin/bash
 
 n=$1
 docker container stop $n

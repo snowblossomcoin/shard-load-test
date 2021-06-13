@@ -1,4 +1,3 @@
-#!/bin/bash
 
 docker volume rm snow.node.z.0
 docker volume rm snow.explore.z.0
