@@ -4,7 +4,7 @@ set -eu
 
 start-group.sh z 0
 
-image=repo.1209k.com/1209k/snowshard
+export image=repo.1209k.com/1209k/snowshard
 
 for group in $(cat $HOME/shardtest.groups)
 do
