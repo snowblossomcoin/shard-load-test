@@ -1,6 +1,5 @@
 #!/bin/bash
 
-image=snowblossom/snowshard
 
 if [ $# -ne 2 ]
 then

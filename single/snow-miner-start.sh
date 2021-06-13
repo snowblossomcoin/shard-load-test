@@ -1,6 +1,5 @@
 #!/bin/bash
 
-image=snowblossom/snowshard
 
 if [ $# -lt 2 ]
 then
