@@ -1,4 +1,6 @@
 
+. shard-settings.sh
+
 if [ $# -lt 2 ]
 then
   echo "syntax: $0 group shard"

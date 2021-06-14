@@ -1,7 +1,8 @@
 #!/bin/bash
 
-docker pull snowblossom/snowshard
-docker pull repo.1209k.com/1209k/snowshard
+. shard-settings.sh
+
+docker pull $image
 
 cd ~/shard-load-test.git
 git pull

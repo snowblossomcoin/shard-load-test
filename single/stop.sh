@@ -1,6 +1,8 @@
 
 set -eu
 
+. shard-settings.sh
+
 stop-container.sh snow.node.z.0 &
 stop-container.sh snow.explore.z.0 &
 

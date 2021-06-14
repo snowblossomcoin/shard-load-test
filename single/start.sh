@@ -1,14 +1,13 @@
 #!/bin/bash
 
 set -eu
+. shard-settings.sh
 
 start-group.sh z 0
 
-export image=repo.1209k.com/1209k/snowshard
-
-for group in $(cat $HOME/shardtest.groups)
+for group in $group_list
 do
-  for shard in $(cat $HOME/shardtest.shards)
+  for shard in $node_list
   do
     echo "Starting $group $shard"
     start-group.sh $group $shard

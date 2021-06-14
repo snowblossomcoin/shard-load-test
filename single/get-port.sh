@@ -1,5 +1,7 @@
 #!/bin/bash
 
+. shard-settings.sh
+
 if [ $# -ne 3 ]
 then
   echo "syntax: $0 group shards service"
