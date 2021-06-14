@@ -23,7 +23,7 @@ docker run -d --restart always --name $tag --network host \
   -e snow_miner_network=$network \
   -e snow_miner_node_uri=$uri \
   -e snow_miner_mine_to_address=$address \
-  -e snow_miner_rate_limit=2000 \
+  -e snow_miner_rate_limit=$miner_rate \
   -e snow_miner_remark=$tag \
   -v $tag:/data $image solominer
 

@@ -7,7 +7,7 @@ seed_shard=0
 
 load_test_rate=1
 
+miner_rate=8000
 
 image=repo.1209k.com/1209k/snowshard
-
 
