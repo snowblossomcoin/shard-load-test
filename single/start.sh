@@ -3,7 +3,7 @@
 set -eu
 . shard-settings.sh
 
-start-group.sh z 0
+start-group.sh z $seed_shard
 
 for group in $group_list
 do

@@ -3,8 +3,8 @@ set -eu
 
 . shard-settings.sh
 
-stop-container.sh snow.node.z.0 &
-stop-container.sh snow.explore.z.0 &
+stop-container.sh snow.node.z.$seed_shard &
+stop-container.sh snow.explore.z.$seed_shard &
 
 for group in $group_list
 do

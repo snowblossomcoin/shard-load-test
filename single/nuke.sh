@@ -2,8 +2,8 @@
 
 . shard-settings.sh
 
-docker volume rm snow.node.z.0
-docker volume rm snow.explore.z.0
+docker volume rm snow.node.z.$seed_shard
+docker volume rm snow.explore.z.$seed_shard
 
 for group in $group_list
 do
