@@ -1,3 +1,4 @@
+#!/bin/bash
 
 . shard-settings.sh
 if [ $# -ne 2 ]
