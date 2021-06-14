@@ -6,9 +6,9 @@ set -eu
 stop-container.sh snow.node.z.0 &
 stop-container.sh snow.explore.z.0 &
 
-for group in $(cat $HOME/shardtest.groups)
+for group in $group_list
 do
-  for shard in $(cat $HOME/shardtest.shards)
+  for shard in $node_list
   do
     echo "Stopping $group $shard"
 
