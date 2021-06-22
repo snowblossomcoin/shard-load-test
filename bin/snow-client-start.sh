@@ -26,6 +26,6 @@ docker run -d --restart always --name $tag --network host \
   -e snow_client_wallet_path=/wallet \
   -e snow_client_seed_gap=0 \
   -e snow_client_preferred_shard=$shard \
-  -e snow_client_loadtest_send_rate=20 \
+  -e snow_client_loadtest_send_rate=1 \
   -v $wallet_vol:/wallet $image client loadtest_shard
 
