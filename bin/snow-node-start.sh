@@ -34,7 +34,7 @@ trust_addr=$(cat ~/shard-load-test.git/trustkey/trustkey.${group}/address.txt)
 docker volume create $tag
 
 docker run -d --restart always --name $tag --network host \
-  -e SNOWBLOSSOM_JAVA_OPTIONS="-Xmx6g" \
+  -e SNOWBLOSSOM_JAVA_OPTIONS="-Xmx4g" \
   -e snow_node_network=$network \
   -e snow_node_service_port=$port \
   -e snow_node_tls_service_port=$tls_port \

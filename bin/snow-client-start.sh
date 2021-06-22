@@ -20,6 +20,7 @@ tag="snow.client.$group"
 wallet_vol="$HOME/shard-load-test.git/loadclients/client.${group}"
 
 docker run -d --restart always --name $tag --network host \
+  -e SNOWBLOSSOM_JAVA_OPTIONS="-Xmx1g" \
   -e snow_client_network=$network \
   -e snow_client_node_uri=$uri \
   -e snow_client_wallet_path=/wallet \
