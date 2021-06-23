@@ -20,6 +20,18 @@ node_tcp=$(get-port.sh $group $shard node_tcp)
 trust_vol="$HOME/shard-load-test.git/trustkey/trustkey.${group}"
 trust_addr=$(cat ~/shard-load-test.git/trustkey/trustkey.${group}/address.txt)
 
+if [ "$group" == "z" ]
+then
+  for g in a b c d
+  do
+    trust_addr=$trust_addr,$(cat ~/shard-load-test.git/trustkey/trustkey.${g}/address.txt)
+  done
+
+  echo "Seed trust: $trust_addr"
+
+
+fi
+
 docker volume create $tag
 
 docker run -d --restart always --name $tag --network host \
