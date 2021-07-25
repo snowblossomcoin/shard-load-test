@@ -20,6 +20,8 @@ node_tcp=$(get-port.sh $group $shard node_tcp)
 trust_vol="$HOME/shard-load-test.git/trustkey/trustkey.${group}"
 trust_addr=$(cat ~/shard-load-test.git/trustkey/trustkey.${group}/address.txt)
 
+extra_ops=""
+
 if [ "$group" == "z" ]
 then
   for g in a b c d
@@ -28,6 +30,7 @@ then
   done
 
   echo "Seed trust: $trust_addr"
+  extra_ops="-e snow_mempool_reject_p2p_tx=true"
 
 
 fi
@@ -43,6 +46,8 @@ docker run -d --restart always --name $tag --network host \
   -e snow_node_trustnet_key_path=/data/trust \
   -e snow_node_trustnet_signers=${trust_addr} \
   -e snow_node_seed_uris=grpc+tls://localhost/ \
+  ${extra_ops} \
   -v $trust_vol:/data/trust \
   -v $tag:/data $image
+
 
