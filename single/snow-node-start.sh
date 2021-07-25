@@ -30,7 +30,7 @@ then
   done
 
   echo "Seed trust: $trust_addr"
-  extra_ops="-e snow_mempool_reject_p2p_tx=true"
+  extra_ops="-e snow_node_mempool_reject_p2p_tx=true"
 
 
 fi
