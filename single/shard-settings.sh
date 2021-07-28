@@ -11,3 +11,7 @@ miner_rate=8000
 
 image=repo.1209k.com/1209k/snowshard
 
+ram="-Xms6g -Xmx6g"
+
+seed_ram="-Xms16g -Xmx16g"
+

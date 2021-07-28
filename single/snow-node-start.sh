@@ -31,14 +31,14 @@ then
 
   echo "Seed trust: $trust_addr"
   extra_ops="-e snow_node_mempool_reject_p2p_tx=true"
-
+  ram="$seed_ram"
 
 fi
 
 docker volume create $tag
 
 docker run -d --restart always --name $tag --network host \
-  -e SNOWBLOSSOM_JAVA_OPTIONS="-Xmx4g" \
+  -e SNOWBLOSSOM_JAVA_OPTIONS="$ram" \
   -e snow_node_network=$network \
   -e snow_node_service_port=$node_tcp \
   -e snow_node_tls_service_port=$node_tls \
