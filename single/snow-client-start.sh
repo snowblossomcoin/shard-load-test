@@ -21,7 +21,7 @@ wallet_vol="$HOME/shard-load-test.git/loadclients/client.${group}"
 docker volume create $tag
 
 docker run -d --restart always --name $tag --network host \
-  -e SNOWBLOSSOM_JAVA_OPTIONS="-Xmx1g" \
+  -e SNOWBLOSSOM_JAVA_OPTIONS="-Xmx256m" \
   -e snow_client_network=$network \
   -e snow_client_node_uri=$uri \
   -e snow_client_wallet_path=/wallet \
