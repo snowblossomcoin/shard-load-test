@@ -1,7 +1,7 @@
 #!/bin/bash
 
 . shard-settings.sh
-if [ $# -ne 2 ]
+if [ $# -ne 1 ]
 then
   echo "syntax: $0 group"
   exit 1
