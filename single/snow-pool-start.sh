@@ -36,5 +36,5 @@ docker run -d --restart always --name $tag --network host \
   -e snow_pool_db_type=atomic_file \
   -e snow_pool_db_path=/data/pool.db \
   -e snow_pool_min_diff=15 \
-  -v $tag:/data $image explorer
+  -v $tag:/data $image pool
 
