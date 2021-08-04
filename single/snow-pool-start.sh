@@ -18,7 +18,7 @@ node_uri=""
 for shard in $node_list
 do
   p=$(get-port.sh $group $shard node_tls)
-  node_uri="${node_uri},grpc+tls://localhost:${p}/,"
+  node_uri="${node_uri}grpc+tls://localhost:${p}/,"
 done
 
 address=$(cat ~/shard-load-test.git/loadclients/client.${group}/address.txt)
