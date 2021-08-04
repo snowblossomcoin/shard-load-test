@@ -10,5 +10,7 @@ fi
 group=$1
 
 snow-pool-start.sh $group
+snow-pool-miner-start.sh $group
+
 
 

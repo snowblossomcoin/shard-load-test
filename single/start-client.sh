@@ -10,6 +10,6 @@ fi
 group=$1
 shard=$2
 
-snow-miner-start.sh $group $shard
+#snow-miner-start.sh $group $shard
 snow-client-start.sh $group $shard
 
