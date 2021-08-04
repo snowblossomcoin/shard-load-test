@@ -7,6 +7,7 @@ docker volume rm snow.explore.z.$seed_shard
 
 for group in $group_list
 do
+  docker volume rm snow.pool.$group
   for shard in $node_list
   do
     echo "Nuke $group $shard"
