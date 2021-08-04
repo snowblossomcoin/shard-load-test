@@ -11,6 +11,7 @@ do
   do
     echo "Starting $group $shard"
     start-group.sh $group $shard
+    start-group-mine.sh $group
     start-client.sh $group $shard
   done
 done

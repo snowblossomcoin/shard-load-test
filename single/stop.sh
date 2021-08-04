@@ -9,6 +9,7 @@ stop-container.sh snow.explore.z.$seed_shard &
 
 for group in $group_list
 do
+  stop-container.sh snow.pool.$group &
   for shard in $node_list
   do
     echo "Stopping $group $shard"

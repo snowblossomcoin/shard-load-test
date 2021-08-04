@@ -75,6 +75,15 @@ if [ $service == "explorer" ]
 then
   port_str="${port_str}2"
 fi
+if [ $service == "pool" ]
+then
+  port_str="${port_str}3"
+fi
+if [ $service == "pool_rpc" ]
+then
+  port_str="${port_str}4"
+fi
+
 
 echo $port_str
 

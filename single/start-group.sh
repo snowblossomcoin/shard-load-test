@@ -13,3 +13,6 @@ shard=$2
 snow-node-start.sh $group $shard
 snow-explore-start.sh $group $shard
 
+
+
+
