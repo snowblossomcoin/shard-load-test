@@ -8,7 +8,6 @@ then
 fi
 
 group=$1
-network=testshard
 
 pool_port=$(get-port.sh $group 0 pool)
 pool_rpc_port=$(get-port.sh $group 0 pool_rpc)

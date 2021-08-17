@@ -15,3 +15,5 @@ ram="-Xms6g -Xmx6g"
 
 seed_ram="-Xms16g -Xmx16g"
 
+network=testshard
+

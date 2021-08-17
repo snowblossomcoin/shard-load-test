@@ -8,7 +8,6 @@ then
 fi
 
 group=$1
-network=testshard
 
 node_port=$(get-port.sh $group 0 pool)
 address=$(cat ~/shard-load-test.git/loadclients/client.${group}/address.txt)

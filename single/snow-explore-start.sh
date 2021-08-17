@@ -9,7 +9,6 @@ fi
 
 group=$1
 shard=$2
-network=testshard
 
 node_tls=$(get-port.sh $group $shard node_tls)
 port=$(get-port.sh $group $shard explorer)

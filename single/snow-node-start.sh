@@ -10,7 +10,6 @@ fi
 group=$1
 shard=$2
 
-network=testshard
 
 tag="snow.node.$group.$shard"
 
