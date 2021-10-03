@@ -10,7 +10,7 @@ fi
 group=$1
 
 node_port=$(get-port.sh $group 0 pool)
-address=$(cat ~/shard-load-test.git/loadclients/client.${group}/address.txt)
+address=$(cat ~/shard-load-test.git/loadclients/${network}/client.${group}/address.txt)
 tag="snow.poolmine.$group"
 
 docker volume create $tag

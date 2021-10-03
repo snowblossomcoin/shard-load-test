@@ -20,7 +20,7 @@ do
   node_uri="${node_uri}grpc+tls://localhost:${p}/,"
 done
 
-address=$(cat ~/shard-load-test.git/loadclients/client.${group}/address.txt)
+address=$(cat ~/shard-load-test.git/loadclients/${network}/client.${group}/address.txt)
 
 docker volume create $tag
 

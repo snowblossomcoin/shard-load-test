@@ -12,7 +12,7 @@ shard=$2
 
 node_tls=$(get-port.sh $group $shard node_tls)
 uri=grpc+tls://localhost:$node_tls/
-address=$(cat ~/shard-load-test.git/loadclients/client.${group}/address.txt)
+address=$(cat ~/shard-load-test.git/loadclients/${network}/client.${group}/address.txt)
 tag="snow.mine.$group.$shard"
 
 docker volume create $tag

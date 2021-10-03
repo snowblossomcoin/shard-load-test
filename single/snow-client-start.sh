@@ -16,7 +16,7 @@ uri=grpc+tls://localhost:${node_tls}/
 
 tag="snow.client.$group.$shard"
 
-wallet_vol="$HOME/shard-load-test.git/loadclients/client.${group}"
+wallet_vol="$HOME/shard-load-test.git/loadclients/${network}/client.${group}"
 docker volume create $tag
 
 docker run -d --restart always --name $tag --network host \
