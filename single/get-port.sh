@@ -17,17 +17,16 @@ if [ $group == "z" ]
 then
   if [ $service == "node_tcp" ]
   then
-    echo "2361"
+    echo "2371"
   fi
   if [ $service == "node_tls" ]
   then
-    echo "2362"
+    echo "2372"
   fi
   if [ $service == "explorer" ]
   then
     echo "80"
   fi
-
   exit 0
 
 fi
@@ -83,7 +82,6 @@ if [ $service == "pool_rpc" ]
 then
   port_str="${port_str}4"
 fi
-
 
 echo $port_str
 
