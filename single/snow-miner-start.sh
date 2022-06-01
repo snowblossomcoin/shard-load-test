@@ -19,10 +19,10 @@ docker volume create $tag
 
 docker run -d --restart always --name $tag --network host \
   -e SNOWBLOSSOM_JAVA_OPTIONS="-Xmx512m" \
-  -e snow_miner_network=$network \
-  -e snow_miner_node_uri=$uri \
-  -e snow_miner_mine_to_address=$address \
-  -e snow_miner_rate_limit=$miner_rate \
-  -e snow_miner_remark=$tag \
+  -e snowblossom_network=$network \
+  -e snowblossom_node_uri=$uri \
+  -e snowblossom_mine_to_address=$address \
+  -e snowblossom_rate_limit=$miner_rate \
+  -e snowblossom_remark=$tag \
   -v $tag:/data $image solominer
 

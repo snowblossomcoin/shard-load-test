@@ -35,13 +35,13 @@ docker volume create $tag
 
 docker run -d --restart always --name $tag --network host \
   -e SNOWBLOSSOM_JAVA_OPTIONS="-Xmx4g" \
-  -e snow_node_network=$network \
-  -e snow_node_service_port=$port \
-  -e snow_node_tls_service_port=$tls_port \
-  -e snow_node_shards=$shards \
-  -e snow_node_trustnet_key_path=/data/trust \
-  -e snow_node_trustnet_signers=${trust_addr} \
-  -e snow_node_mempool_reject_p2p_tx=${mempool_reject_p2p_tx} \
+  -e snowblossom_network=$network \
+  -e snowblossom_service_port=$port \
+  -e snowblossom_tls_service_port=$tls_port \
+  -e snowblossom_shards=$shards \
+  -e snowblossom_trustnet_key_path=/data/trust \
+  -e snowblossom_trustnet_signers=${trust_addr} \
+  -e snowblossom_mempool_reject_p2p_tx=${mempool_reject_p2p_tx} \
   -v $trust_vol:/data/trust \
   -v $tag:/data $image
 

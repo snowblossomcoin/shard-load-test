@@ -29,7 +29,7 @@ then
   done
 
   echo "Seed trust: $trust_addr"
-  extra_ops="-e snow_node_mempool_reject_p2p_tx=true"
+  extra_ops="-e snowblossom_mempool_reject_p2p_tx=true"
   ram="$seed_ram"
 
 fi
@@ -38,13 +38,13 @@ docker volume create $tag
 
 docker run -d --restart always --name $tag --network host \
   -e SNOWBLOSSOM_JAVA_OPTIONS="$ram" \
-  -e snow_node_network=$network \
-  -e snow_node_service_port=$node_tcp \
-  -e snow_node_tls_service_port=$node_tls \
-  -e snow_node_shards=$shard \
-  -e snow_node_trustnet_key_path=/data/trust \
-  -e snow_node_trustnet_signers=${trust_addr} \
-  -e snow_node_seed_uris=grpc+tls://localhost/ \
+  -e snowblossom_network=$network \
+  -e snowblossom_service_port=$node_tcp \
+  -e snowblossom_tls_service_port=$node_tls \
+  -e snowblossom_shards=$shard \
+  -e snowblossom_trustnet_key_path=/data/trust \
+  -e snowblossom_trustnet_signers=${trust_addr} \
+  -e snowblossom_seed_uris=grpc+tls://localhost/ \
   ${extra_ops} \
   -v $trust_vol:/data/trust \
   -v $tag:/data $image

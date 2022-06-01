@@ -26,15 +26,15 @@ docker volume create $tag
 
 docker run -d --restart always --name $tag --network host \
   -e SNOWBLOSSOM_JAVA_OPTIONS="-Xmx2g -Xms2g" \
-  -e snow_pool_network=$network \
-  -e snow_pool_node_uri=$node_uri \
-  -e snow_pool_mining_pool_port=$pool_port \
-  -e snow_pool_rpc_port=$pool_rpc_port \
-  -e snow_pool_pool_fee=0.005 \
-  -e snow_pool_pool_address=$address \
-  -e snow_pool_db_type=atomic_file \
-  -e snow_pool_db_path=/data/pool.db \
-  -e snow_pool_remark=$tag \
-  -e snow_pool_min_diff=15 \
+  -e snowblossom_network=$network \
+  -e snowblossom_node_uri=$node_uri \
+  -e snowblossom_mining_pool_port=$pool_port \
+  -e snowblossom_rpc_port=$pool_rpc_port \
+  -e snowblossom_pool_fee=0.005 \
+  -e snowblossom_pool_address=$address \
+  -e snowblossom_db_type=atomic_file \
+  -e snowblossom_db_path=/data/pool.db \
+  -e snowblossom_remark=$tag \
+  -e snowblossom_min_diff=15 \
   -v $tag:/data $image pool
 

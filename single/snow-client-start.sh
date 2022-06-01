@@ -21,12 +21,12 @@ docker volume create $tag
 
 docker run -d --restart always --name $tag --network host \
   -e SNOWBLOSSOM_JAVA_OPTIONS="-Xmx256m" \
-  -e snow_client_network=$network \
-  -e snow_client_node_uri=$uri \
-  -e snow_client_wallet_path=/wallet \
-  -e snow_client_seed_gap=0 \
-  -e snow_client_preferred_shard=$shard \
-  -e snow_client_loadtest_send_rate=$load_test_rate \
+  -e snowblossom_network=$network \
+  -e snowblossom_node_uri=$uri \
+  -e snowblossom_wallet_path=/wallet \
+  -e snowblossom_seed_gap=0 \
+  -e snowblossom_preferred_shard=$shard \
+  -e snowblossom_loadtest_send_rate=$load_test_rate \
   -v $wallet_vol:/wallet \
   -v $tag:/data $image client loadtest_shard
 

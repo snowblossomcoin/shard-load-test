@@ -17,10 +17,10 @@ docker volume create $tag
 
 docker run -d --restart always --name $tag --network host \
   -e SNOWBLOSSOM_JAVA_OPTIONS="-Xmx512m" \
-  -e snow_miner_network=$network \
-  -e snow_miner_pool_host=localhost \
-  -e snow_miner_pool_port=$node_port \
-  -e snow_miner_mine_to_address=$address \
-  -e snow_miner_rate_limit=$miner_rate \
+  -e snowblossom_network=$network \
+  -e snowblossom_pool_host=localhost \
+  -e snowblossom_pool_port=$node_port \
+  -e snowblossom_mine_to_address=$address \
+  -e snowblossom_rate_limit=$miner_rate \
   -v $tag:/data $image poolminer
 
